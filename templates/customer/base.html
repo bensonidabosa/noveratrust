@@ -47,24 +47,11 @@
             background-color: #1f345a;
             border-color: #1f345a;
         }
-      /* .btn-primary{
-            background-color: #020361;
-            border-color: #020361;
-        }
-      .btn-primary:hover{
-            background-color: #04067c;
-            border-color: #030592;
-        } */
     </style>
     
   </head>
   <body>
 
-    <!-- {% if request.user.status == 'suspended' %}
-      <div class="base_info">
-        This account is blocked, please contact our customer care for further enquiry.
-      </div>
-    {% endif %} -->
     {% url 'customer:customer_care' as customer_care_url %}
     {% if request.user.status == 'suspended' and request.path != customer_care_url %}
       <div class="base_info">
